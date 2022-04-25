@@ -1,0 +1,37 @@
+<h1><%= piece.title %></h1>
+<div class="row">
+    <div class="col">
+        <img src="<%= piece.primaryImage %>" width="100%">
+    </div>
+    <div class="col">
+        <b>Author:</b><% if (piece.constituents == null) {%>
+                          <i> No artist information</i> 
+                      <%} else {%>
+                          <%= piece.artistDisplayName %>
+                      <% } %><br>
+        <br>
+        <b>Description:</b>
+            <%= piece.title %> is dated <%= piece.objectDate %>, during the <%= piece.period %> period.
+            The <%= piece.objectName %> is made with <%= piece.medium %>, and is of <%= piece.culture %> culture.
+            Obtained in <%= piece.accessionYear %>, this piece currently resides at the <%= piece.repository %>.
+            <% if (piece.isHighlight) { %>
+                This is a highlighted work in the collection.
+            <%}%>
+            
+
+    </div>
+    <div class="col">
+        <b>Department:</b> <%= piece.department %> <br>
+        <b>Dimensions:</b> <%= piece.dimensions %> <br>
+        <b>Source:</b> <%= piece.creditLine %> <br>
+        <b>Gallery Number:</b> <% if (piece.GalleryNumber == "") {%>
+                                    <i> Not Available</i> 
+                                <%} else {%>
+                                    <%= piece.GalleryNumber %> 
+                                <%}%><br>
+        <a href="<%= piece.objectURL %>">Link to art piece on MET site</a> <br>
+        <br>
+        <button class="btn btn-medium btn-info">Add to List</button>
+    </div>
+</div>
+

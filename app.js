@@ -112,6 +112,20 @@ app.get("/about", (req, res, next) => {
 });
 
 
+
+
+app.get('/objects/:objectID',
+  async (req,res,next) => {
+    const {objectID} = req.params;
+    const piece = await Piece.findOne({objectID:objectID})
+    res.locals.piece = piece
+    res.render('piece')
+  }
+)
+
+
+
+
 /* ************************
   Loading (or reloading) the data into a collection
    ************************ */
