@@ -32,10 +32,10 @@ const URL = 'https://collectionapi.metmuseum.org/public/collection/v1/objects'
 // *********************************************************** //
 
 const mongoose = require( 'mongoose' );
-const mongodb_URI = 'mongodb+srv://iwang:BrandeisCS103@cluster0.9bkmh.mongodb.net/METGreekRomanSample?retryWrites=true&w=majority'
-
-mongoose.connect( mongodb_URI, { useNewUrlParser: true, useUnifiedTopology: true } );
-// fix deprecation warnings
+const mongodb_URI = process.env.mongodb_URI
+mongoose.connect( mongodb_URI,
+              { useNewUrlParser: true, useUnifiedTopology: true } );
+// fix deprecation warnings....
 mongoose.set('useFindAndModify', false); 
 mongoose.set('useCreateIndex', true);
 
@@ -288,7 +288,8 @@ app.use(function(err, req, res, next) {
 //  Starting up the server!
 // *********************************************************** //
 //Here we set the port to use between 1024 and 65535  (2^16-1)
-const port = "4999";
+const port = process.env.PORT || "4999";
+console.log('connecting on port '+port);
 app.set("port", port);
 
 // and now we startup the server listening on that port
