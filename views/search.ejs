@@ -1,0 +1,45 @@
+
+
+    <div class="jumbotron">
+        <h1>PA03: Course Finder Fall20-Spr21 </h1>
+        <p></p>
+    </div>
+
+    <p class="p-3 m-3 border border-primary bg-light">
+        The goal of this assignment is to write an app that will let
+        students pick their courses for the year. Since we don't have 
+        the data for this year (due to workday issues), we will use the 
+        2020-2021 Academic year data. You must signup or login to see
+        the courses and create your schedule.
+    </p>
+    
+    <% if (loggedIn) {%>  
+        <form method="post" action="/objects/byArtist">
+            Search by artist:
+              <input type="text" name="artist">
+            <input type="submit">
+        </form>
+        <br>
+        <form method="post" action="/objects/byKeyword">
+            Search by keyword: 
+            <input type="text" name="keyword">
+            <input type="submit">
+        </form>
+        <!--
+        <form method="post" action="/courses/byDate">
+            Search by date: 
+            <input type="number" name="email">
+            <input type="submit">
+        </form>
+        <form method="post" action="/courses/byCulture">
+            Search by culture: 
+            <input type="number" name="email">
+            <input type="submit">
+        </form>
+        <br> -->
+        <!--<a href="/schedule/show">Show Schedule</a>-->
+    <% } else { %>
+        Please log in or sign up first. You can do that <a href="/login">here</a>.
+    <% } %>
+
+
