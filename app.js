@@ -149,6 +149,16 @@ app.post('/objects/byKeyword',
   }
 )
 
+app.post('/objects/byCulture',
+  async (req,res,next) => {
+    const culture = req.body.culture;
+    var cultureRegExp = new RegExp(culture, "gi")
+    const pieces = await Piece.find({culture:cultureRegExp})
+    res.locals.pieces = pieces
+    res.render('piecelist')
+  }
+)
+
 
 
 /* ************************
