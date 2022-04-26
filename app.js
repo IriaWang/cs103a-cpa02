@@ -111,9 +111,7 @@ app.get("/about", (req, res, next) => {
   res.render("about");
 });
 
-
-
-
+// search methods
 app.get('/objects/:objectID',
   async (req,res,next) => {
     const {objectID} = req.params;
@@ -203,6 +201,51 @@ app.get('/upsertDB',
     }
     const num = await Piece.find({}).count();
     res.send("data uploaded: "+num)
+  }
+)
+
+// starred list methods
+app.get('/addObject/:objectID',
+  async (req,res,next) => {
+    try {
+      const objectID = req.params.objectID
+      const userId = res.locals.user._id
+      const lookup = await Starred.find({objectID,userId})
+      if (lookup.length==0){
+        const starred = new Starred({objectID,userId})
+        await starred.save()
+      }
+      res.redirect('/starred/show')
+    } catch(e){
+      next(e)
+    }
+  })
+
+  app.get('/starred/show',
+  async (req,res,next) => {
+    try{
+      const userId = res.locals.user._id;
+      const objectIds = (await Starred.find({userId})).map(x => x.objectID)
+      console.log(objectIds)
+      res.locals.pieces = await Piece.find({objectID:{$in: objectIds}})
+      res.render('starred')
+    } catch(e){
+      next(e)
+    }
+  }
+)
+
+app.get('/starred/remove/:objectID',
+  async (req,res,next) => {
+    try {
+      await Starred.remove(
+                {userId:res.locals.user._id,
+                 objectID:req.params.objectID})
+      res.redirect('/starred/show')
+
+    } catch(e){
+      next(e)
+    }
   }
 )
 

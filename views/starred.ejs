@@ -1,0 +1,13 @@
+<ul>
+    <% for (piece of pieces){%>
+        <li> 
+            <a href="/starred/remove/<%= piece.objectID %>">X</a>
+            <%= piece.title %>.
+            <% if (piece.constituents != null) { %>
+                <%= piece.artistDisplayName %>.
+            <% } %>
+            <%= piece.department %>, <%= piece.objectDate %>
+            
+        </li>
+    <% } %>
+</ul>
