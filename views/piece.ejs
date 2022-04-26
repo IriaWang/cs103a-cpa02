@@ -24,16 +24,21 @@
     <div class="col">
         <b>Department:</b> <%= piece.department %> <br>
         <b>Classification:</b> <%= piece.classification %> <br>
-        <b>Dimensions:</b> <%= piece.dimensions %> <br>
-        <b>Source:</b> <%= piece.creditLine %> <br>
+        <b>Source:</b> <%= piece.creditLine %> <br><br>
+        <b>Dimensions:</b> <%= piece.dimensions %> <br><br>
+        
         <b>Gallery Number:</b> <% if (piece.GalleryNumber == "") {%>
                                     <i> Not Available</i> 
                                 <%} else {%>
                                     <%= piece.GalleryNumber %> 
-                                <%}%><br>
+                                <%}%><br><br>
         <a href="<%= piece.objectURL %>">Link to art piece on MET site</a> <br>
         <br>
-        <a href="/addObject/<%= piece.objectID %>" %><button class="btn btn-medium btn-info">Add to Starred</button></a>
+        <% if (starred) { %>
+            <a href="/starred/remove/<%= piece.objectID %>" %><button class="btn btn-medium btn-info">Remove from Starred</button></a>
+        <% } else { %>
+            <a href="/addObject/<%= piece.objectID %>" %><button class="btn btn-medium btn-info">Add to Starred</button></a>
+        <% } %>
     </div>
 </div>
 

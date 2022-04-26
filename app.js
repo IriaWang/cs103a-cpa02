@@ -116,6 +116,13 @@ app.get('/objects/:objectID',
   async (req,res,next) => {
     const {objectID} = req.params;
     const piece = await Piece.findOne({objectID:objectID})
+    const userId = res.locals.user._id
+    const lookup = await Starred.find({objectID,userId})
+    if (lookup.length==0){
+        res.locals.starred = false
+    } else {
+        res.locals.starred = true
+    }
     res.locals.piece = piece
     res.render('piece')
   }
