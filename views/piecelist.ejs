@@ -1,0 +1,14 @@
+<h1>Search Results:</h1>
+Here we want a ul list with the instructor, coursenum, title, term
+<hr>
+
+<% for (piece of pieces) { %>
+    <a href="/objects/<%= piece.objectID %>"><%= piece.title></a><br>
+    <% if (piece.constituents == null) {%>
+        <i>(No artist information), </i> 
+    <%} else {%>
+        <%= piece.artistDisplayName %>, 
+    <% } %><br>
+    <%= piece.department %>. <%= piece.objectDate %><br>
+    <br>
+<%}%>
