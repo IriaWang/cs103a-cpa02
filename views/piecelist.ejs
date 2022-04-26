@@ -17,6 +17,8 @@
         <%= piece.culture %>.
     <% } else if (search == "date") {%>
         Estimated dates: <%= piece.objectBeginDate %>-<%= piece.objectEndDate %>.
+    <% } else if (search == "gallery") { %>
+        Gallery number: <%= piece.GalleryNumber %>.
     <% } %><br>
     <br>
 <%}%>

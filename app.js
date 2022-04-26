@@ -172,6 +172,15 @@ app.post('/objects/byCulture',
   }
 )
 
+app.post('/objects/byGallery',
+  async (req,res,next) => {
+    const gallery = req.body.gallery;
+    const pieces = await Piece.find({GalleryNumber:gallery})
+    res.locals.search = "gallery"
+    res.locals.pieces = pieces
+    res.render('piecelist')
+  }
+)
 
 
 /* ************************
