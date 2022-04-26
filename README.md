@@ -32,3 +32,9 @@ nodemon
 ```
 
 where the special link, not provided publicly, would be in that first line. To run, then simply run startup.sh.
+
+## Using the App (demonstration)
+
+Users may view art pieces, make queries to search for objects of interest, and star specific pieces that may interest the user. Starred pieces and searches are linked to a user account.
+
+### Login
