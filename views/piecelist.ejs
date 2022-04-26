@@ -5,20 +5,26 @@
 <% } else {%>
     <i><%= pieces.length %> results</i> <br> <br>
 <% } %>
-<% for (piece of pieces) { %>
-    <a href="/objects/<%= piece.objectID %>"><%= piece.title %></a><br>
-    <% if (piece.constituents == null) {%>
-        <i>(No artist information), </i> 
-    <%} else {%>
-        <%= piece.artistDisplayName %>, 
-    <% } %>
-    <%= piece.department %>. <%= piece.objectDate %>
-    <% if (search == "culture") { %>
-        <%= piece.culture %>.
-    <% } else if (search == "date") {%>
-        Estimated dates: <%= piece.objectBeginDate %>-<%= piece.objectEndDate %>.
-    <% } else if (search == "gallery") { %>
-        Gallery number: <%= piece.GalleryNumber %>.
-    <% } %><br>
-    <br>
-<%}%>
+
+<div class="d-flex flex-wrap text-center">
+    <% for (piece of pieces) { %>
+        <div class="p-3 m-3 border border-primary bg-light">
+            <img src="<%= piece.primaryImage %>" height="200"><br>
+            <a href="/objects/<%= piece.objectID %>"><%= piece.title %></a><br> 
+            <% if (piece.constituents == null) {%>
+                <i>(No artist information), </i> 
+            <%} else {%>
+                <%= piece.artistDisplayName %>, 
+            <% } %>
+            <%= piece.department %>.<br><%= piece.objectDate %>
+            <% if (search == "culture") { %>
+                <%= piece.culture %>.
+            <% } else if (search == "date") {%>
+                Estimated dates: <%= piece.objectBeginDate %>-<%= piece.objectEndDate %>.
+            <% } else if (search == "gallery") { %>
+                Gallery number: <%= piece.GalleryNumber %>.
+            <% } %>
+        </div>
+        
+    <%}%>
+</div>

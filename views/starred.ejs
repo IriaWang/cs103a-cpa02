@@ -1,13 +1,16 @@
-<ul>
+
+<div class="d-flex flex-wrap text-center">
     <% for (piece of pieces){%>
-        <li> 
-            <a href="/starred/remove/<%= piece.objectID %>">X</a>
-            <%= piece.title %>.
-            <% if (piece.constituents != null) { %>
-                <%= piece.artistDisplayName %>.
+        <div class="p-3 m-3 border border-primary bg-light">
+            <a href="/starred/remove/<%= piece.objectID %>" style="float:right;">X</a><br>
+            <img src="<%= piece.primaryImage %>" height="200"><br>
+            <a href="/objects/<%= piece.objectID %>"><%= piece.title %></a><br>
+            <% if (piece.constituents == null) {%>
+                <i>(No artist information), </i> 
+            <%} else {%>
+                <%= piece.artistDisplayName %>, 
             <% } %>
-            <%= piece.department %>, <%= piece.objectDate %>
-            
-        </li>
+            <%= piece.department %>.<br><%= piece.objectDate %>
+            </div>
     <% } %>
-</ul>
+</div>

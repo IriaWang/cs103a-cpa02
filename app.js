@@ -189,8 +189,8 @@ app.post('/objects/byGallery',
 
 app.get('/upsertDB',
   async (req,res,next) => {
-    const {data} = await axios.get(URL + '?departmentIds=13')
-    const objectIDs = data.objectIDs.slice(1, 20000 + 1)
+    const {data} = await axios.get(URL + '?departmentIds=11')
+    const objectIDs = data.objectIDs.slice(1, 2000 + 1)
     let count = 0
     console.log(objectIDs.length)
     for (objectID of objectIDs){
