@@ -1,16 +1,22 @@
 <h1>Search Results:</h1>
 <hr>
-
 <% if (pieces == null) {%>
     <i>No Results</i> 
-<%}%>
+<% } else {%>
+    <i><%= pieces.length %> results</i> <br> <br>
+<% } %>
 <% for (piece of pieces) { %>
     <a href="/objects/<%= piece.objectID %>"><%= piece.title %></a><br>
     <% if (piece.constituents == null) {%>
         <i>(No artist information), </i> 
     <%} else {%>
         <%= piece.artistDisplayName %>, 
+    <% } %>
+    <%= piece.department %>. <%= piece.objectDate %>
+    <% if (search == "culture") { %>
+        <%= piece.culture %>.
+    <% } else if (search == "date") {%>
+        Estimated dates: <%= piece.objectBeginDate %>-<%= piece.objectEndDate %>.
     <% } %><br>
-    <%= piece.department %>. <%= piece.objectDate %><br>
     <br>
 <%}%>

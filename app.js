@@ -134,6 +134,7 @@ app.post('/objects/byArtist',
     const artist = req.body.artist;
     var artistRegExp = new RegExp(artist, "gi")
     const pieces = await Piece.find({artistDisplayName:artistRegExp})
+    res.locals.search = "artist"
     res.locals.pieces = pieces
     res.render('piecelist')
   }
@@ -144,6 +145,17 @@ app.post('/objects/byKeyword',
     const keyword = req.body.keyword;
     var keywordRegExp = new RegExp(keyword, "gi")
     const pieces = await Piece.find({title:keywordRegExp})
+    res.locals.search = "keyword"
+    res.locals.pieces = pieces
+    res.render('piecelist')
+  }
+)
+
+app.post('/objects/byDate',
+  async (req,res,next) => {
+    const date = req.body.date;
+    const pieces = await Piece.find({objectBeginDate:{$lt:date},objectEndDate:{$gt:date}})
+    res.locals.search = "date"
     res.locals.pieces = pieces
     res.render('piecelist')
   }
@@ -154,6 +166,7 @@ app.post('/objects/byCulture',
     const culture = req.body.culture;
     var cultureRegExp = new RegExp(culture, "gi")
     const pieces = await Piece.find({culture:cultureRegExp})
+    res.locals.search = "culture"
     res.locals.pieces = pieces
     res.render('piecelist')
   }
