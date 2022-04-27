@@ -74,3 +74,16 @@ The user can search through the database via a five different methods. The user 
 * Gallery number: Some items are on display and correspond to a gallery number. If you know that gallery number, then type it in and the app will return all items in the database located in the gallery. (e.g. 171, 174, 158)
 
 <img src="./demonstration/gallery1.png" width="400"/><img src="./demonstration/gallery2.png" width="400"/>
+
+### View Object Details
+
+Click on the title of an object to see the object details. There is a link to more details on the author and to the art piece on the MET site. In the lower right, there is also a blue button that allows the user to add the piece to starred items, or remove from starred items of that piece is already starred.
+
+![Alt text](./demonstration/object.png)
+
+### Modify Schedule
+
+After clicking on the blue button, the piece will be "starred", or added to the list of starred items. The app will redirect to this list. To remove an item click the "X" in the upper right corner of the piece you wish to remove, or click on the title again to see object details and click the blue button.
+
+![Alt text](./demonstration/starred1.png)
+![Alt text](./demonstration/starred2.png)
