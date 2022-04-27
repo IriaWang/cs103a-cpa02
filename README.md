@@ -57,7 +57,8 @@ The user can search through the database via a five different methods. The user 
 
 * Artist: Type an artists's name, or part of an artist's name, and the app will return all objects by artists with names containing your input query. (e.g. David)
 
-<img src="./demonstration/artist1.png" width="500"/><img src="./demonstration/artist2.png" width="500"/>
+<img src="./demonstration/artist1.png" width="400"/><img src="./demonstration/artist2.png" width="400"/>
+
 * Title Keyword: Type a keyword and the app wil return all objects that have titles containing that keyword. (e.g. jug)
 ![Alt text](./demonstration/keyword1.png) ![Alt text](./demonstration/keyword2.png)
 * Date: Type in a year and the app will return all objects dated at that year, or dated around that year. (e.g. 500)
