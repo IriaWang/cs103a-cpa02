@@ -7,6 +7,10 @@ Fortunately, the MET offers [open access](https://www.metmuseum.org/about-the-me
 
 As a minimum viable product, data for a sample art pieces selected from the MET open access API were uploaded to the cloud through MongoDB atlas from the API. The sample includes 20,000 Greek and Roman art pieces, as well as 2,000 european paintings. Users with an account may search for and view artworks based on artist, title, cuture, date, department, etc. Users may also star certain pieces they like, wish to know more about, or wish to visit.
 
+This is on the about page!
+
+![Alt text](./demonstration/about.png)
+
 ## Access and Installation
 The link to the app can be found [here](https://frozen-coast-24672.herokuapp.com/). To install locally, however, the mongoDB server link is required.
 
@@ -81,9 +85,11 @@ Click on the title of an object to see the object details. There is a link to mo
 
 ![Alt text](./demonstration/object.png)
 
-### Modify Schedule
+### Modify Starred Items
 
 After clicking on the blue button, the piece will be "starred", or added to the list of starred items. The app will redirect to this list. To remove an item click the "X" in the upper right corner of the piece you wish to remove, or click on the title again to see object details and click the blue button.
 
 ![Alt text](./demonstration/starred1.png)
 ![Alt text](./demonstration/starred2.png)
+
+Enjoy the app!
