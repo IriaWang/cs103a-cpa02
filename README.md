@@ -41,7 +41,7 @@ Users may view art pieces, make queries to search for objects of interest, and s
 
 After launching the app, the following screen can be seen. Click on the login/sign-up link.
 
-<img src="./demonstration/home.png)" width="200">
+<img src="./demonstration/home.png" width="200"/>
 
 Then, on the next screen, login or sign up if you do not have an account. If you signed or logged in correctly, the brower will return you to the home screen with a logout button at the top bar.
 
