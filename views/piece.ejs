@@ -13,7 +13,10 @@
         <br>
         <b>Description:</b>
             <%= piece.title %> is dated <%= piece.objectDate %>, during the <%= piece.period %> period.
-            The <%= piece.objectName %> is made with <%= piece.medium %>, and is of <%= piece.culture %> culture.
+            The <%= piece.objectName %> is made with <%= piece.medium %>
+            <% if (piece.culture != "") { %>
+                , and is of <%= piece.culture %> culture
+            <% } %>. 
             Obtained in <%= piece.accessionYear %>, this piece currently resides at the <%= piece.repository %>.
             <% if (piece.isHighlight) { %>
                 This is a highlighted work in the collection.

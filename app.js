@@ -159,7 +159,7 @@ app.post('/objects/byKeyword',
 app.post('/objects/byDate',
   async (req,res,next) => {
     const date = req.body.date;
-    const pieces = await Piece.find({objectBeginDate:{$lt:date},objectEndDate:{$gt:date}})
+    const pieces = await Piece.find({objectBeginDate:{$lte:date},objectEndDate:{$gte:date}})
     res.locals.search = "date"
     res.locals.pieces = pieces
     res.render('piecelist')
