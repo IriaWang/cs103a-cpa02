@@ -56,6 +56,7 @@ Click on the search tab on the top bar or the link on the home page to start a n
 The user can search through the database via a five different methods. The user can search by artist, title keyword, date, culture, or gallery number. Type in the query in the box and hit the submit button to the right.
 
 * Artist: Type an artists's name, or part of an artist's name, and the app will return all objects by artists with names containing your input query. (e.g. David)
+
 <img src="./demonstration/artist1.png" width="300"/><img src="./demonstration/artist2.png" width="300"/>
 * Title Keyword: Type a keyword and the app wil return all objects that have titles containing that keyword. (e.g. jug)
 ![Alt text](./demonstration/keyword1.png) ![Alt text](./demonstration/keyword2.png)
