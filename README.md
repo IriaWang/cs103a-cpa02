@@ -41,7 +41,7 @@ Users may view art pieces, make queries to search for objects of interest, and s
 
 After launching the app, the following screen can be seen. Click on the login/sign-up link.
 
-<img src="./demonstration/home.png" width="200"/>
+<img src="./demonstration/home.png" width="500"/>
 
 Then, on the next screen, login or sign up if you do not have an account. If you signed or logged in correctly, the brower will return you to the home screen with a logout button at the top bar.
 
@@ -51,12 +51,12 @@ Then, on the next screen, login or sign up if you do not have an account. If you
 
 Click on the search tab on the top bar or the link on the home page to start a new search. The search screen is as follows
 
-![Alt text](./demonstration/search.png)
+<img src="./demonstration/search.png" width="500"/>
 
 The user can search through the database via a five different methods. The user can search by artist, title keyword, date, culture, or gallery number. Type in the query in the box and hit the submit button to the right.
 
 * Artist: Type an artists's name, or part of an artist's name, and the app will return all objects by artists with names containing your input query. (e.g. David)
-![Alt text](./demonstration/artist1.png) ![Alt text](./demonstration/artist2.png)
+<img src="./demonstration/artist1.png" width="300"/><img src="./demonstration/artist2.png" width="300"/>
 * Title Keyword: Type a keyword and the app wil return all objects that have titles containing that keyword. (e.g. jug)
 ![Alt text](./demonstration/keyword1.png) ![Alt text](./demonstration/keyword2.png)
 * Date: Type in a year and the app will return all objects dated at that year, or dated around that year. (e.g. 500)
