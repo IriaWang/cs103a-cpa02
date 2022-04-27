@@ -56,8 +56,13 @@ Click on the search tab on the top bar or the link on the home page to start a n
 The user can search through the database via a five different methods. The user can search by artist, title keyword, date, culture, or gallery number. Type in the query in the box and hit the submit button to the right.
 
 * Artist: Type an artists's name, or part of an artist's name, and the app will return all objects by artists with names containing your input query. (e.g. David)
+![Alt text](./demonstration/artist1.png) ![Alt text](./demonstration/artist2.png)
 * Title Keyword: Type a keyword and the app wil return all objects that have titles containing that keyword. (e.g. jug)
-* Date: Type in a year and the app will return all objects dated at that year, or dated around that year. (e.g. 400)
+![Alt text](./demonstration/keyword1.png) ![Alt text](./demonstration/keyword2.png)
+* Date: Type in a year and the app will return all objects dated at that year, or dated around that year. (e.g. 500)
+![Alt text](./demonstration/date1.png) ![Alt text](./demonstration/date2.png)
 * Culture: Type in a nationality and the app will return all objects from that region, given that is it provided in the database. (e.g. Roman)
+![Alt text](./demonstration/culture1.png) ![Alt text](./demonstration/culture2.png)
 * Gallery number: Some items are on display and correspond to a gallery number. If you know that gallery number, then type it in and the app will return all items in the database located in the gallery. (e.g. 171, 174, 158)
+![Alt text](./demonstration/gallery1.png) ![Alt text](./demonstration/gallery2.png)
 
