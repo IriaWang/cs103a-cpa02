@@ -60,11 +60,17 @@ The user can search through the database via a five different methods. The user 
 <img src="./demonstration/artist1.png" width="400"/><img src="./demonstration/artist2.png" width="400"/>
 
 * Title Keyword: Type a keyword and the app wil return all objects that have titles containing that keyword. (e.g. jug)
-![Alt text](./demonstration/keyword1.png) ![Alt text](./demonstration/keyword2.png)
-* Date: Type in a year and the app will return all objects dated at that year, or dated around that year. (e.g. 500)
-![Alt text](./demonstration/date1.png) ![Alt text](./demonstration/date2.png)
-* Culture: Type in a nationality and the app will return all objects from that region, given that is it provided in the database. (e.g. Roman)
-![Alt text](./demonstration/culture1.png) ![Alt text](./demonstration/culture2.png)
-* Gallery number: Some items are on display and correspond to a gallery number. If you know that gallery number, then type it in and the app will return all items in the database located in the gallery. (e.g. 171, 174, 158)
-![Alt text](./demonstration/gallery1.png) ![Alt text](./demonstration/gallery2.png)
 
+<img src="./demonstration/keyword1.png" width="400"/><img src="./demonstration/keyword2.png" width="400"/>
+
+* Date: Type in a year and the app will return all objects dated at that year, or dated around that year. (e.g. 500)
+
+<img src="./demonstration/date1.png" width="400"/><img src="./demonstration/date2.png" width="400"/>
+
+* Culture: Type in a nationality and the app will return all objects from that region, given that is it provided in the database. (e.g. Roman)
+
+<img src="./demonstration/culture1.png" width="400"/><img src="./demonstration/culture2.png" width="400"/>
+
+* Gallery number: Some items are on display and correspond to a gallery number. If you know that gallery number, then type it in and the app will return all items in the database located in the gallery. (e.g. 171, 174, 158)
+
+<img src="./demonstration/gallery1.png" width="400"/><img src="./demonstration/gallery2.png" width="400"/>
